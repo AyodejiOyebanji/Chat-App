@@ -1,0 +1,74 @@
+<section class="body">
+    <img src="/assets/images/download-removebg-preview (3).png" alt="" class="logo">
+    <div class="container ">
+        <div class="row ">
+            <div class="col-12 ">
+                <div class="row ">
+                    <div class="side col-5 " >
+                     <img src="/assets/images/message-removebg-preview.png" alt="">   
+                    </div>
+                    <div class="vir col-1 "></div>
+                    <div class="side col-5 "  >
+                        <h3>Fill up your personal details.</h3>
+                        <div class="alert alert-danger" *ngIf="errorMsg">
+                            {{errorMsg}}
+                        
+                          </div>
+
+                        <form  [formGroup]="registrationForm" class="needs-validation" novalidate (submit)="submitForm()">
+
+                            <div>
+                                <label for="">Firstname</label>
+                                <input type="text" class="form-control" formControlName="fName" [class.is-invalid]="fName?.touched && fName?.invalid" value="Mark">
+
+                                <div *ngIf="fName?.touched && fName?.invalid" >
+                                    <small *ngIf="fName?.errors?.['required']" class="text-danger valid-feedback">
+                                        Firstname is Empty
+                                    </small>
+                                </div>
+                            </div>   
+                            <div>
+                             <label for="">Middlename</label>
+                             <input type="text" class="form-control" formControlName="mName" >
+                         </div>      
+                         <div>
+                             <label for="">Lastname</label>
+                             <input type="text" class="form-control" formControlName="lName" [class.is-invalid]="lName?.touched && lName?.invalid" value="Mark" >
+                             <div *ngIf="lName?.touched && lName?.invalid" >
+                                <small *ngIf="lName?.errors?.['required']" class="text-danger valid-feedback">
+                                    Last Name is required
+                                </small>
+
+                            </div>
+
+                         </div>      
+                         <div>
+                             <label for="">Date Of Birth</label>
+                             <input type="date" class="form-control" formControlName="dOB" [class.is-invalid]="dOB?.touched && dOB?.invalid" value="Mark">
+                             <div *ngIf="dOB?.touched && dOB?.invalid" >
+                                <small *ngIf="dOB?.errors?.['required']" class="text-danger valid-feedback">
+                                    Date of Birth is required
+                                </small>
+
+                            </div>
+
+                         </div>      
+                         <select name="" id="" class="form-control my-1" formControlName="country" >
+                             <option value="default">Choose your Country</option>
+                             <option *ngFor="let item of allCountries">{{item}}</option> 
+                         </select>      
+                         <button class="next btn text-light my-2" >Next</button>
+                        </form>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>

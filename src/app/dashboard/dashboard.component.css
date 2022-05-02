@@ -1,0 +1,21 @@
+.navbar{
+    height: 55px;
+    background:linear-gradient(to right, #F4F6FF, #0000FF);
+}
+.logo_img{
+    height: 116px;
+    width: 116px;
+    }
+
+.post{
+    width: 90%;
+    height: 120px;
+    
+}
+.postImg{
+    height: 60px;
+    width: 60px;
+}
+.postInp{
+    border-radius:30px ;
+}

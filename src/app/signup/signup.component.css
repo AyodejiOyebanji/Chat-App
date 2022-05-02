@@ -1,0 +1,43 @@
+.body{
+    background-color: #F4F6FF;
+    height: 100vh;
+    width: 100%;
+}
+.logo{
+    height: 120px;
+    width: 120px;
+}
+.vir{
+    border-left: 1px solid green;
+    height: 340px;
+    
+  
+}
+.continueImg{
+    width: 30px;
+    height: 30px;
+
+}
+.googleBtn{
+    border: 1px solid black;
+    height: 38px;
+    width: 80%;
+}
+.or{
+    margin-left: 160px;
+}
+.form-control{
+    width: 80%;
+}
+/* .hrone{
+    width: 35%;
+}
+.hrtwo{
+    width: 35% ;
+} */
+.join{
+    width: 80%;
+    background-color: blue;
+    font-weight: 500;
+
+}
