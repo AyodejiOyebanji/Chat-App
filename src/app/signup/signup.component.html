@@ -1,0 +1,103 @@
+<section class="body">
+  <img
+    src="/assets/images/download-removebg-preview (3).png"
+    alt=""
+    class="logo"
+  />
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <div class="side col-5">
+            <img src="/assets/images/message-removebg-preview.png" alt="" />
+          </div>
+          <div class="vir col-1"></div>
+          <div class="side col-5">
+            <h5>Sign Up with Lawwy to Continue</h5>
+            <button class="googleBtn btn bg-light">
+              <img
+                src="/assets/images/goo.jfif"
+                alt=""
+                class="continueImg"
+              />Continue with Google
+            </button>
+            <p class="or">Or</p>
+            <div class="alert alert-danger" *ngIf="errorMsg">
+              {{ errorMsg }}
+            </div>
+
+            <form
+              [formGroup]="registrationForm"
+              class="needs-validation"
+              novalidate
+              (submit)="submitForm()"
+            >
+              <div>
+                <label for="">Email or phone number</label>
+                <input
+                  type="email"
+                  name="email"
+                  id=""
+                  class="form-control"
+                  formControlName="email"
+                  [class.is-invalid]="email?.touched && email?.invalid"
+                  value="Mark"
+                />
+                <div *ngIf="email?.touched && email?.invalid">
+                  <small
+                    *ngIf="email?.errors?.['required']"
+                    class="text-danger valid-feedback"
+                  >
+                    Your Email is required
+                  </small>
+                </div>
+              </div>
+              <div>
+                <label for="">Password (6 or more characters) </label>
+                <input
+                  type="text"
+                  name="password"
+                  id=""
+                  class="form-control"
+                  formControlName="password"
+                  [class.is-invalid]="password?.touched && password?.invalid"
+                />
+                <div *ngIf="password?.touched && password?.invalid">
+                  <small
+                    *ngIf="password?.errors?.['minlength']"
+                    class="text-danger"
+                  >
+                    Your Password must be 6 or more
+                  </small>
+                </div>
+              </div>
+              <small class="text-muted"
+                >By clicking Agree & Join, you agree to the Lawwy
+                <span
+                  >community Agreement, Privacy Policy, and Cookie Policy.</span
+                >
+              </small>
+              <br />
+              <div>
+                <button class="join btn text-light">Agree & Join</button>
+              </div>
+            </form>
+            <span class="text-muted"
+              >Already on Lawwy? <span class="text-primary">Sign in</span></span
+            >
+
+            <!-- <span>
+                            <span><hr class="hrone"> </span>
+                            <span>Or</span>
+                            <span>
+                                <hr class="hrtwo">
+
+                            </span>
+
+                         </span> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

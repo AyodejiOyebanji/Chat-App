@@ -1,0 +1,22 @@
+/* .all{
+    height: 100vh;
+    width: 100%;
+    color: white;
+    overflow: hidden;
+    background: #C04848; 
+    background: linear-gradient(rgb(72,0,72,0.8), rgb(238,84,92)), url("../assets/images/divido.jfif");  
+    background: linear-gradient(rgba(133, 101, 133, 0.8), rgb(238,84,92)), url("../assets/images/divido.jfif"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hole{
+    margin-left: 300px;
+}
+.btn{
+    margin-left: 150px;
+    border: none;
+    outline: none;
+}
+.disp{
+    margin-left: 20px;
+} */
